@@ -1,10 +1,10 @@
 let headerSlider = new Swiper(".container__skills", {
-    slidesPerView: 4,
     spaceBetween: 7,
+    slidesPerView: 4,
     loop: true,
-    speed: 3200,
+    speed: 3000,
     autoplay: {
-        delay: 100,
+        delay: 0,
         disableOnInteraction: false,
     },
 });
