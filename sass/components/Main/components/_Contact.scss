@@ -1,0 +1,56 @@
+.contact__container {
+    @include flexCenter;
+    background-color: var(--blue--color-2);
+    padding: 3rem;
+    max-width: 100%;
+    flex-direction: column;
+    gap: 2rem;
+    .contact__text {
+        @include title2Text;
+    }
+    p {
+        @include normalText;
+    }
+
+    .form-container {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: 20rem;
+    }
+
+    .feedback-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    label {
+        margin-top: 10px;
+        color: var(--dark-color);
+    }
+
+    input,
+    textarea {
+        padding: 10px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        border: 1px solid var(--gray--color);
+        border-radius: 4px;
+        width: 100%;
+    }
+
+    button {
+        background-color: #4caf50;
+        color: var(--white-color);
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+}

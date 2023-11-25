@@ -1,0 +1,88 @@
+.portfolio__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5rem;
+    .title__portfolio {
+        @include title2Text;
+    }
+    .portfolio__items {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 45vh;
+        gap: 0.4rem;
+        perspective: calc(var(--index) * 35);
+        .portfolio__item {
+            width: calc(var(--index) * 3);
+            height: calc(var(--index) * 12);
+            background-size: cover;
+            background-position: center;
+            cursor: pointer;
+            transition: transform 1.25s var(--transition),
+                filter 3s var(--transition), width 1.25s var(--transition);
+            will-change: transform, filter;
+            filter: grayscale(1) brightness(0.5);
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                width: 20px;
+                height: 100%;
+                right: calc(var(--index) * -1);
+            }
+            &::after {
+                left: calc(var(--index) * -1);
+            }
+            &:has(+ :hover) {
+                transform: translateZ(calc(var(--index) * 8.5)) rotateY(-35deg);
+                filter: inherit;
+            }
+            &:has(+ * + :hover) {
+                transform: translateZ(calc(var(--index) * 5.6)) rotateY(-40deg);
+                filter: inherit;
+            }
+            &:has(+ * + * + :hover) {
+                transform: translateZ(calc(var(--index) * 2.4)) rotateY(-30deg);
+                filter: inherit;
+            }
+            &:has(+ * + * + * + :hover) {
+                transform: translateZ(calc(var(--index) * 0.6)) rotateY(-14deg);
+                filter: inherit;
+            }
+        }
+        .portfolio__item:hover {
+            transform: translateZ(calc(var(--index) * 10));
+            filter: inherit;
+        }
+        .portfolio__item:hover + * {
+            transform: translateZ(calc(var(--index) * 8.5)) rotateY(35deg);
+            filter: inherit;
+            z-index: -1;
+        }
+        .portfolio__item:hover + * + * {
+            transform: translateZ(calc(var(--index) * 5.6)) rotateY(40deg);
+            filter: inherit;
+            z-index: -2;
+        }
+        .portfolio__item:hover + * + * + * {
+            transform: translateZ(calc(var(--index) * 2.4)) rotateY(30deg);
+            filter: inherit;
+            z-index: -3;
+        }
+        .portfolio__item:hover + * + * + * + * {
+            transform: translateZ(calc(var(--index) * 0.6)) rotateY(14deg);
+            filter: inherit;
+            z-index: -4;
+        }
+        .portfolio__item:active,
+        .portfolio__item:focus {
+            width: 28vw;
+            transform: translateZ(calc(var(--index) * 10));
+            filter: inherit;
+            z-index: 100;
+            margin: 0 0.45vw;
+        }
+    }
+}

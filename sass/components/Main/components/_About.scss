@@ -1,0 +1,48 @@
+.container__about {
+    // @include flexCenter;
+    display: flex;
+    position: relative;
+    padding: 5rem;
+    justify-content: space-evenly;
+    .about__desc {
+        width: 39rem;
+        ul {
+            li {
+                margin-bottom: 3rem;
+            }
+
+            .desc__items__title {
+                @include titleText;
+            }
+            .desc__items__description {
+                @include normalText;
+            }
+            .desc__items__link {
+                button {
+                    @include buttonText;
+                    display: inline-block;
+                    border-radius: 2px;
+                    border: none;
+                    background-color: var(--orange-color);
+                    padding: 1.4rem 2rem;
+                }
+            }
+        }
+    }
+    .about__photo {
+        background-color: var(--blue--color-2);
+        border-radius: 50%;
+        width: 260px;
+        height: 260px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container__about {
+    // display: flex;
+    @include flexCenter;
+    flex-direction: column-reverse;
+.about__desc {
+        width: 20rem;
+}
+}}

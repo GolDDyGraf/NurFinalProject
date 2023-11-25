@@ -1,0 +1,35 @@
+.container__skills {
+    height: 10rem;
+    background-color: var(--blue--color-2);
+    padding: 3rem;
+    max-width: 100%;
+     overflow: hidden;
+    .title__skills {
+        @include title2Text;
+        text-align: center;
+    }
+ 
+        .skills__item {
+            position: relative;
+            display: flex;
+            width: 200%;
+            flex-direction: column;
+            align-items: center;
+            margin: 1rem;
+            
+            img {
+                width: 3rem;
+               transition: 0.5s ease;
+                border-radius: 15px;
+            }
+            span {
+                @include normalText;
+            }
+
+            img:hover {
+                transform: scale(1.2);
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            }
+        }
+    }
+

@@ -1,0 +1,76 @@
+@mixin normalText {
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    color: var(--dark-color);
+}
+
+@mixin boldText {
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 700;
+    color: var(--dark-color);
+}
+
+@mixin titleText {
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 700;
+    color: var(--dark-color);
+}
+
+@mixin title2Text {
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 700;
+    color: var(--dark-color);
+}
+
+@mixin menuText {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 500;
+    color: var(--dark-color);
+}
+
+@mixin normalText {
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    color: var(--dark-color);
+}
+
+@mixin buttonText {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    color: var(--white-color);
+}
+
+@mixin linkText {
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    color: var(--blue-color);
+}
+
+@mixin specialText {
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    color: var(--white-color);
+}
+
+@mixin specail2Text {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    color: var(--gray-color);
+}
+
+@mixin flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
